@@ -27,10 +27,19 @@ urlpatterns = [
     path('login/',views.LoginPage,name='login'),
     path('home/',views.HomePage,name='home'),
     path('predict/',views.PredictPage,name='predict'),
-    path('data/',views.DataPage,name='data'),
     path('report/',views.ReportPage,name='report'),
     path('logout/',views.LogoutPage,name='logout'),
     path("", include("allauth.urls")),
+    
+    #predict url
+    path('predict/result', views.result, name='result'),
+
+    # CRUD url
+    path('heart/', views.heart),
+    path('viewdata/', views.viewdata),
+    path('delete/<int:id>', views.delete),
+    path('edit/<int:id>', views.edit),
+    path('update/<int:id>', views.update),
     
     
 

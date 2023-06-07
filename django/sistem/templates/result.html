@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<br>
+<br>
+<br>
+<center>
+  <div class="card text-dark bg-light mb-5" style="max-width: 25rem;">
+      <div class="card-header ">
+        Hasil Prediksi Anda Sebagai Berikut :
+      </div>
+      <div class="card-body">
+           <h5> {{ result }} </h5>
+        <p class="card-text"></p>
+        <br>
+        <br>
+        <p class="lead">
+          <center>
+              <a class="btn-primary btn-lg" href="{% url 'predict' %}" role="button" style="background-color: #fe7ba7" > Let's Predict Again ? </a>
+          </center>
+          </p>
+
+      </div>
+    </div>
+  </center>
+
+{% endblock content %}
